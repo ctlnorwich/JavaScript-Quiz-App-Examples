@@ -1,0 +1,84 @@
+{
+  "questions": [
+    {
+      "id": "1",
+      "question": "React was released in what year?",
+      "answers": [
+        "2009",
+        "2013",
+        "2015"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": "2",
+      "question": "What is React?",
+      "answers": [
+        "A framework",
+        "A language",
+        "A library"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": "3",
+      "question": "What do you use to create React elements inside a DOM node?",
+      "answers": [
+        "createRoot",
+        "createElement",
+        "useEffect"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": "4",
+      "question": "What version of the DOM does React use to track changes?",
+      "answers": [
+        "Shadow DOM",
+        "Virtual DOM",
+        "React DOM"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": "5",
+      "question": "Which of these is a valid React component name?",
+      "answers": [
+        "infoPanel",
+        "infopanel",
+        "InfoPanel"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": "6",
+      "question": "Which operator can be used to conditionally render JSX?",
+      "answers": [
+        "||",
+        "&&",
+        "??"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": "7",
+      "question": "What does TSX stand for?",
+      "answers": [
+        "TypeScript XML",
+        "TypeSafe XML",
+        "Type Syntax Extended"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": "8",
+      "question": "Which of these is not a built in React Hook?",
+      "answers": [
+        "useContext",
+        "useMemo",
+        "useAttribute"
+      ],
+      "correctAnswer": 2
+    }
+  ]
+}
