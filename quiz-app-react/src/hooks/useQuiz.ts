@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 type Question = {
   question: string, 
@@ -7,25 +7,25 @@ type Question = {
 }
 
 const useQuiz = () => {
-  // This doesn't change
+  // This string doesn't change
   const messageFirst: string = "First question..."
 
-  // State
+  // Set up state. Rely on implicit types for state based on default values except the questionBank array, since we have a type for the question object defined above.
   const [questionBank, setQuestionBank] = useState<Question[]>([])
-  const [score, setScore] = useState<number>(0)
-  const [name, setName] = useState<string>("")
-  const [nameEntered, setNameEntered] = useState<boolean>(false)
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0)
-  const [resultMessage, setResultMessage] = useState<string>(messageFirst)
-  const [inProgress, setInProgress] = useState<boolean>(true)
-  const [loading, setLoading] = useState<boolean>(true)
-  const [error, setError] = useState<boolean>(false)
+  const [score, setScore] = useState(0)
+  const [name, setName] = useState("")
+  const [nameEntered, setNameEntered] = useState(false)
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
+  const [resultMessage, setResultMessage] = useState(messageFirst)
+  const [inProgress, setInProgress] = useState(true)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
 
   // Set current question via index
   const currentQuestion: Question = questionBank[currentQuestionIndex]
 
-  // Fetch Questions with a try catch statement - could use useEffect for this too.
-  useMemo(() => {
+  // Fetch Questions with a try catch statement - could use useMemo for this too.
+  useEffect(() => {
     const fetchQuestions = async () => {
       try {
         const res = await fetch('http://localhost:3000/questions')

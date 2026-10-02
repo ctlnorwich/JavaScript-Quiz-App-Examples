@@ -2,11 +2,15 @@ import Question from './components/Question'
 import useQuiz from './hooks/useQuiz'
 
 function App() {
+  // The application logic has been added to a useQuiz custom hook, but it could also just be put at the top of this App component.
+
   const quiz = useQuiz()
 
+  // If loading or if error. return appropriate html message.
   if (quiz.loading) return <p>Loading questions...</p>
   if (quiz.error) return <p>Failed to load questions.</p>
 
+  // Else return quiz:
   return (
     <>
       <h1>React Quiz</h1>
