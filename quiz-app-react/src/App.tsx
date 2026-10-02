@@ -6,7 +6,7 @@ function App() {
 
   const quiz = useQuiz()
 
-  // If loading or if error. return appropriate html message.
+  // If loading or if error, return appropriate html message.
   if (quiz.loading) return <p>Loading questions...</p>
   if (quiz.error) return <p>Failed to load questions.</p>
 
